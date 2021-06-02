@@ -166,7 +166,7 @@ public class ReactNativeBiometrics extends ReactContextBaseJavaModule {
                                 BiometricPrompt biometricPrompt = new BiometricPrompt(fragmentActivity, executor, authCallback);
 
                                 PromptInfo promptInfo = new PromptInfo.Builder()
-                                        .setDeviceCredentialAllowed(false)
+                                        .setDeviceCredentialAllowed(true)
                                         .setNegativeButtonText(cancelButtomText)
                                         .setTitle(promptMessage)
                                         .build();
@@ -198,7 +198,7 @@ public class ReactNativeBiometrics extends ReactContextBaseJavaModule {
                                 BiometricPrompt biometricPrompt = new BiometricPrompt(fragmentActivity, executor, authCallback);
 
                                 PromptInfo promptInfo = new PromptInfo.Builder()
-                                        .setDeviceCredentialAllowed(false)
+                                        .setDeviceCredentialAllowed(true)
                                         .setNegativeButtonText(cancelButtomText)
                                         .setTitle(promptMessage)
                                         .build();
