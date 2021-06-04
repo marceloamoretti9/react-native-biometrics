@@ -161,7 +161,6 @@ RCT_EXPORT_METHOD(simplePrompt: (NSDictionary *)params resolver:(RCTPromiseResol
     NSString *promptMessage = [RCTConvert NSString:params[@"promptMessage"]];
 
     LAContext *context = [[LAContext alloc] init];
-    context.localizedFallbackTitle = @"";
 
     [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:promptMessage reply:^(BOOL success, NSError *biometricError) {
       if (success) {

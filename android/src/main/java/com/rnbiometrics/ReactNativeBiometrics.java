@@ -198,11 +198,10 @@ public class ReactNativeBiometrics extends ReactContextBaseJavaModule {
                                 BiometricPrompt biometricPrompt = new BiometricPrompt(fragmentActivity, executor, authCallback);
 
                                 PromptInfo promptInfo = new PromptInfo.Builder()
-                                        .setDeviceCredentialAllowed(true)
-                                        .setNegativeButtonText(cancelButtomText)
-                                        .setTitle(promptMessage)
-                                        .build();
-                                biometricPrompt.authenticate(promptInfo);
+                                         .setTitle(promptMessage)
+                                         .setDeviceCredentialAllowed(true)
+                                         .build();
+                                     biometricPrompt.authenticate(promptInfo);
                             } catch (Exception e) {
                                 promise.reject("Error displaying local biometric prompt: " + e.getMessage(), "Error displaying local biometric prompt: " + e.getMessage());
                             }
