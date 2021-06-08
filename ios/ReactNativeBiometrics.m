@@ -17,7 +17,7 @@ RCT_EXPORT_METHOD(isSensorAvailable:(RCTPromiseResolveBlock)resolve rejecter:(RC
 {
   LAContext *context = [[LAContext alloc] init];
   NSError *la_error = nil;
-  BOOL canEvaluatePolicy = [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:&la_error];
+  BOOL canEvaluatePolicy = [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&la_error];
 
   if (canEvaluatePolicy) {
     NSString *biometryType = [self getBiometryType:context];
